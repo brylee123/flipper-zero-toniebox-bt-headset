@@ -208,6 +208,36 @@ Potential additions include:
 - support for writing compatible physical SLIX tags
 - validation of generated NDEF records
 
+
+## Credits and Acknowledgements
+
+This project exists because of the research and information shared by members of the
+`flipper-zero-tonies` community.
+
+Special thanks to:
+
+- **[NetfreaksShadow](https://github.com/NetfreaksShadow)** — shared the Flipper Zero `.nfc`
+  dump of the official Tonies Bluetooth headphones. That dump exposed the SLIX/NDEF
+  structure and the standard Bluetooth OOB pairing record used by the accessory.
+
+- **[Julienbxl](https://github.com/Julienbxl)** — opened
+  [Issue #197](https://github.com/nortakales/flipper-zero-tonies/issues/197), investigated
+  using the official-headphone NFC data with third-party Bluetooth headphones, identified
+  that the Bluetooth address is stored least-significant-byte first, and reported that
+  replacing the original address with a headset's own Bluetooth address worked.
+
+- **[nortakales](https://github.com/nortakales)** — owner and maintainer of
+  **[flipper-zero-tonies](https://github.com/nortakales/flipper-zero-tonies)**, the
+  community repository where this research and discussion took place.
+
+The original discovery and discussion can be found here:
+
+**[Can anyone share the .nfc of the official bluetooth headset? — Issue #197](https://github.com/nortakales/flipper-zero-tonies/issues/197)**
+
+This repository packages that community discovery into a small Flipper Zero utility.
+Credit for the original NFC dump, Bluetooth-address substitution discovery, and the
+underlying Toniebox/Flipper community research belongs to the contributors above.
+
 ## Disclaimer
 
 This project is unofficial and is not affiliated with, endorsed by, or sponsored by Tonies, Boxine, or Flipper Devices.
